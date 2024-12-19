@@ -1,0 +1,199 @@
+/* Estilo para o container principal */
+.container {
+    display: grid;
+    grid-template-rows: 20px 1fr 20px;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    gap: 24px;
+    background-image: url('../images/imagefundo.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif; /* Fontes mais modernas */
+}
+
+/* Formulário de login */
+.loginForm {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    backdrop-filter: blur(8px); /* Leve desfoque para o fundo */
+    grid-row-start: 2; /* Definindo a posição no grid */
+}
+
+/* Título */
+.titulo {
+    text-align: center;
+    color: #D2AB67; /* Cor de destaque */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.titulo2 {
+    color: #D2AB67; /* Cor de destaque */
+    font-size: 1.0rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.label {
+    font-size: 15px;
+    color: #46190F; /* Cor de texto suave */
+    font-weight: 600;
+}
+
+/* Estilo dos inputs (email e senha) */
+.input {
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid #D2AB67; /* Cor de borda dourada */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+    border-color: #46190F; /* Cor de foco marrom */
+    outline: none;
+    box-shadow: 0 0 8px rgba(70, 25, 15, 0.3); /* Sombra suave no foco */
+}
+
+/* Estilo do botão "Acessar Conta" */
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.submitButton {
+    background-color: #D2AB67; /* Cor de destaque dourada */
+    color: white;
+    font-weight: bold;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+
+.submitButton:hover {
+    background-color: #B88C53; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+.submitButton:active {
+    transform: translateY(0); /* Retorna à posição normal quando clicado */
+}
+
+/* Estilo para o link de "Esqueceu a senha?" */
+.link {
+    color: #D2AB67;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: text-decoration 0.3s ease;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão "Cadastrar-se" */
+.cadastroButton {
+    background-color: transparent;
+    border: 2px solid #46190F;
+    color: #46190F;
+    font-weight: bold;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+.cadastroButton:hover {
+    background-color: #D2AB67; /* Cor de destaque no hover */
+    color: white;
+    transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+.cadastroButton:active {
+    transform: translateY(0); /* Retorna à posição normal quando clicado */
+}
+
+/* Estilo do botão de login e cadastro */
+.buttonGroup button {
+    padding: 14px 24px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.loginButton {
+    background-color: #46190F;
+    color: #ffffff;
+}
+
+.signUpButton {
+    background-color: transparent;
+    border: 2px solid #46190F;
+    color: #46190F;
+}
+
+.loginButton:hover {
+    background-color: #D2AB67;
+}
+
+.signUpButton:hover {
+    background-color: #D2AB67;
+    color: #ffffff;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+
+    .loginForm {
+        max-width: 100%;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .buttonGroup button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+

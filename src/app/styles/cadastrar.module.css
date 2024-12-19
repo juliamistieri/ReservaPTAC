@@ -1,0 +1,153 @@
+.container {
+  display: grid;
+  grid-template-rows: 20px 1fr 20px; /* Define o layout do grid */
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh; /* Ocupa toda a altura da tela */
+  padding: 50px; /* Espaçamento dentro do container */
+  gap: 24px; /* Espaçamento entre os elementos */
+  background-image: url('../images/imagefundo.jpg'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+}
+
+.formulario {
+  background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Sombra leve */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 450px; /* Largura máxima do formulário */
+  width: 100%;
+  backdrop-filter: blur(8px); /* Leve desfoque no fundo */
+  grid-row-start: 2; /* Posiciona o formulário no grid */
+}
+
+.titulo {
+  text-align: center;
+  color: #D2AB67; /* Cor de destaque */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.label {
+  font-size: 15px;
+  color: #46190F; /* Cor do texto */
+  font-weight: 600;
+}
+
+.input {
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #D2AB67; /* Cor da borda dourada */
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #46190F; /* Cor de foco marrom */
+  outline: none;
+  box-shadow: 0 0 8px rgba(70, 25, 15, 0.3); /* Sombra suave ao focar */
+}
+
+/* Estilo do botão "Acessar Conta" */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botão principal de login */
+.submitButton {
+  background-color: #D2AB67; /* Cor de destaque dourada */
+  color: white;
+  font-weight: bold;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #B88C53; /* Cor mais escura no hover */
+  transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+.submitButton:active {
+  transform: translateY(0); /* Retorna à posição normal quando clicado */
+}
+
+/* Link "Esqueceu a senha?" */
+.link {
+  color: #D2AB67;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: text-decoration 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o botão "Cadastrar-se" */
+.cadastroButton {
+  background-color: transparent;
+  border: 2px solid #46190F;
+  color: #46190F;
+  font-weight: bold;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.cadastroButton:hover {
+  background-color: #D2AB67; /* Cor de destaque no hover */
+  color: white;
+  transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+.cadastroButton:active {
+  transform: translateY(0); /* Retorna à posição normal quando clicado */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .container {
+      padding: 20px;
+      padding-bottom: 40px;
+  }
+
+  .formulario {
+      max-width: 100%;
+  }
+
+  .titulo {
+      font-size: 1.5rem; /* Tamanho da fonte reduzido */
+  }
+
+  .buttonGroup button {
+      font-size: 16px;
+      padding: 12px 20px;
+  }
+}
