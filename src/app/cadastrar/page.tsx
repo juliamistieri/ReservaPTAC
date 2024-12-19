@@ -1,8 +1,10 @@
 'use client'
 import styles from "../styles/cadastrar.module.css"
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Usuario from "../interfaces/usuario";
+import { ftruncate } from "fs";
+import { ApiURL } from "../config";
 
 
 export default function Cadastrar() {
@@ -39,13 +41,27 @@ const alterarSenha = (novoPassword: string) => {
   }))
 }
 
-const handleLoginClick = () => {
-  router.push('/login');
-};
+async function handleSubmit(e : FormEvent){
+  e.preventDefault()
+  console.log(usuario)
+  const response = await fetch(`${ApiURL}/auth/cadastro`, {
+    method: "POST",
+    body: JSON.stringify(usuario)
+  })  
+
+  if(response){
+    const data = await response.json()
+    console.log(data)
+  }
+}
+
+//const handleLoginClick = () => {
+//  router.push('/login');
+//};
 
 return (
   <div className={styles.container}>
-    <form className={styles.formulario}>
+    <form className={styles.formulario} onSubmit={handleSubmit}>
       <div className={styles.formGroup}>
         <label htmlFor="nome" className={styles.label}>Nome:</label>
         <input
