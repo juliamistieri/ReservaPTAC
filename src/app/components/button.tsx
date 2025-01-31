@@ -1,12 +1,12 @@
-import styles from "../styles/login.module.css"
+import styles from '../styles/button.module.css';
 
 type ButtonProp = {
-    button : string,
-    funcao: () => void /* uma função sem retorno */
+    titulo: string,
+    tipo: "submit",
 }
-const Button: React.FC<ButtonProp> = ({button, funcao}) => {
-    return (
-    <button className={styles.funcao} onClick={funcao}> {button} </button>
-    )
-};
+
+const Button: React.FC<ButtonProp> = ({titulo, tipo}) => {
+    return (<button className={styles.botao} type={tipo}>{titulo}</button>)
+}
+
 export default Button;

@@ -1,8 +1,9 @@
 interface Usuario {
+    id?: number,
     nome: string,
-    email: string,
+    email?: string,
     password: string,
-    tipo?: 'cliente' | 'adm' /* o sinal de interrogação serve para verificar se a resposta é válida */
+    tipo: string
 }
 
 /* const PerfilUsuario: React.FC<{ usuario: Usuario }>
